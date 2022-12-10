@@ -1,45 +1,41 @@
-import Navbar from "./components/Navbar";
+import Decide from "./impcomponents/Decide";
+import React, { useState } from "react";
 import Login from "./login/Login";
-import Candidate from "./pages/Candidate";
-import { useState } from "react";
-import InterviewCam from "./components/InterviewCam";
-import { useRecordWebcam } from "react-record-webcam";
-import SpeechRecognition, {
-  useSpeechRecognition,
-} from "react-speech-recognition";
-import "./components/InterviewCam.css";
-import MicroPhoneTesting from "./components/MicroPhoneTesting";
 
 function App() {
-  const [show, setShow] = useState(false);
-  const [Itr, setItr] = useState(true);
+  const [studentLog, setStudentLog] = useState(false);
+  const [adminLog, setAdminLog] = useState(false);
+  const [mentorLog, setmentorLog] = useState(false);
 
-  const recordWebcam = useRecordWebcam({ frameRate: 60 });
-  const saveFile = async () => {
-    const blob = await recordWebcam.getRecording();
-  };
-
-  const {
-    transcript,
-    listening,
-    resetTranscript,
-    browserSupportsSpeechRecognition,
-  } = useSpeechRecognition();
+  console.log(studentLog, adminLog, mentorLog);
   return (
     <div>
-      {show ? (
-        <div className="bg-gray-100 flex h-full w-full ">
-          <>
-            <div className="bg-gray-100 flex h-full w-full ">
-              <Navbar setItr={setItr} Itr={Itr} />
-
-              {Itr ? <InterviewCam /> : <Candidate />}
-            </div>
-          </>
-        </div>
+      {studentLog ? (
+        <Login />
+      ) : adminLog ? (
+        <Login />
+      ) : mentorLog ? (
+        <Login />
       ) : (
-        <Login show={show} setShow={setShow} />
+        <Decide
+          studentLog={studentLog}
+          setStudentLog={setStudentLog}
+          adminLog={adminLog}
+          setAdminLog={setAdminLog}
+          mentorLog={mentorLog}
+          setmentorLog={setmentorLog}
+        />
       )}
+
+      {/* <Decide
+        studentLog={studentLog}
+        setStudentLog={setStudentLog}
+        adminLog={adminLog}
+        setAdminLog={setAdminLog}
+        mentorLog={mentorLog}
+        setmentorLog={setmentorLog}
+      /> */}
+      {/* <Login /> */}
     </div>
   );
 }
