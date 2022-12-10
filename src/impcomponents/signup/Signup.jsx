@@ -1,10 +1,10 @@
 import React from "react";
-import Fields from "./Fields";
-import Navbar from "./Navbar";
-import Conference from "../images/conference.png";
+import Fields from "../../login/Fields";
+import Navbar from "../../login/Fields";
+import Conference from "../../images/conference.png";
 
-function Login(props) {
-  const { adminLog, mentorLog, studentLog, setSignup } = props;
+function Signup(props) {
+  const { adminLog, mentorLog, studentLog } = props;
   return (
     <div>
       <div className="">
@@ -20,7 +20,6 @@ function Login(props) {
             studentLog={studentLog}
             adminLog={adminLog}
             mentorLog={mentorLog}
-            setSignup={setSignup}
           />
         </div>
         <div className="flex justify-center items-center p-28">
@@ -31,4 +30,4 @@ function Login(props) {
   );
 }
 
-export default Login;
+export default Signup;
