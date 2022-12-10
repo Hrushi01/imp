@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import Arrow from "../images/arrow.png";
 import round from "../images/round.png";
@@ -6,21 +5,26 @@ import { FaArrowRight } from "react-icons/fa";
 import { Formik, Form, Field } from "formik";
 
 function Fields(props) {
-  const { show, setShow } = props;
-  const onsubmit = () => {
-    if (
-      initialValues.name === "Hrushi" &&
-      initialValues.password === "Keystone"
-    ) {
-      setShow(true);
-    }
-  };
+  const {
+    adminLog,
+
+    mentorLog,
+    studentLog,
+  } = props;
 
   const [initialValues, setInitialvalues] = useState({
     name: "",
     password: "",
   });
-
+  const onsubmit = () => {
+    if (
+      initialValues.name === "Sonu" &&
+      initialValues.password === "Keystone"
+    ) {
+      alert("Logged In Success");
+      console.log("yes logged in");
+    } else alert("Invaid Credentials");
+  };
   return (
     <Formik initialValues={initialValues} onSubmit={onsubmit}>
       {(props) => (
@@ -31,11 +35,21 @@ function Fields(props) {
           <div className="pl-10">
             <div>
               <div className="flex p-2 login font-bold text-4xl ml-24">
-                Log{" "}
+                Log
                 <div className=" pl-2">
                   <div className="p-0">in</div>
 
-                  <div className="text-xs font-medium p-0">Candidates</div>
+                  <div className="text-xs font-medium p-0">
+                    {adminLog ? (
+                      <div> Admin</div>
+                    ) : mentorLog ? (
+                      <div> Mentor</div>
+                    ) : studentLog ? (
+                      <div> Student</div>
+                    ) : (
+                      <></>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>
@@ -65,8 +79,11 @@ function Fields(props) {
           </div>
           <div className="ml-24 pl-0 p-5 ">
             <button
-              type="button "
-              className="w-fit p-3 rounded-lg text-white font-semibold button flex">
+              type="submit"
+              className="w-fit p-3 rounded-lg text-white font-semibold button flex"
+              onClick={() => {
+                console.log("hrushi", initialValues);
+              }}>
               <div className="pr-20 pl-5">Log In</div>
               <div className="p-1">
                 <FaArrowRight />

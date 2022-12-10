@@ -2,14 +2,7 @@ import React from "react";
 import Button from "@mui/material/Button";
 
 function Decide(props) {
-  const {
-    adminLog,
-    setAdminLog,
-    mentorLog,
-    setmentorLog,
-    studentLog,
-    setStudentLog,
-  } = props;
+  const { setAdminLog, setmentorLog, setStudentLog } = props;
   return (
     <div>
       <Button

@@ -1,9 +1,9 @@
 import React from "react";
-import Fields from "./Fields";
-import Navbar from "./Navbar";
-import Conference from "../images/conference.png";
+import Fields from "../../login/Fields";
+import Navbar from "../../login/Fields";
+import Conference from "../../images/conference.png";
 
-function Login(props) {
+function Signup(props) {
   const { adminLog, mentorLog, studentLog } = props;
   return (
     <div>
@@ -30,4 +30,4 @@ function Login(props) {
   );
 }
 
-export default Login;
+export default Signup;
