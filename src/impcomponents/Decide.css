@@ -1,0 +1,43 @@
+.decide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    /* padding: 3rem 0; */
+    flex-direction: column;
+    height: 100vh;
+    gap: 1rem;
+    background-color: #fcfdfc;
+}
+
+.decide h1 {
+    font-weight: bold;
+    color: rgb(57, 165, 212);
+    font-size: 2rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+Button {
+    display: flex;
+    flex-direction: column;
+}
+
+.pic {
+    width: 60px;
+}
+
+.logo {
+    width: 100px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: gray;
+    font-weight: 400;
+}
