@@ -1,0 +1,82 @@
+:root {
+  --sidebar: #0970e5;
+  --sidebartext: #111111;
+  --button-color: #0970e5;
+  --inputBorder-color: #0970e5;
+  --white-background: #fff;
+
+  --white-font: #fff;
+  --red-font: #ff0000;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.meeting {
+  position: absolute;
+  height: 80vh;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 3rem 3rem 3rem 3rem;
+  width: 50rem;
+  border-radius: 23px;
+  /* background: bisque; */
+  background: var(--white-background);
+  box-shadow: 33px 33px 85px #cecece, -33px -33px 85px #f2f2f2;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.meeting {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.meetingElementBlock {
+  width: 100%;
+}
+
+.label {
+  display: block;
+  text-align: left;
+  font-size: 1.4rem;
+}
+
+.meeting input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 10px 10px 10px;
+  border-radius: 3px;
+  border: 1px solid var(--inputBorder-color);
+}
+
+.meeting input:focus {
+  outline: 1.5px solid var(--inputBorder-color);
+}
+
+.meeting p {
+  font-size: 1.2rem;
+  color: var(--red-font);
+  margin: -10px 0 5px 10px;
+}
+
+.meeting button {
+  background: var(--button-color);
+  color: var(--white-font);
+  /* margin: 1rem; */
+  padding: 0.6rem;
+  font-size: 1.2rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  /* margin-right: 0.8rem; */
+  outline: none;
+  border-radius: 2px;
+  opacity: 0.9;
+}
