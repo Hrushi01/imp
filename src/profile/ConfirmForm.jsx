@@ -29,44 +29,45 @@ function ConfirmForm({ initialValues, setInitialvalues, setEdit }) {
               </label>
               <Field name="organizationname" type="text" />
             </div>
+            <div className="grid grid-cols-2 gap-5 gap-y-1">
+              <div className="meetingElementBlock">
+                <label htmlFor="groupname" className="label">
+                  Group name:
+                </label>
+                <Field name="groupname" type="text" />
+              </div>
 
-            <div className="meetingElementBlock">
-              <label htmlFor="groupname" className="label">
-                Group name:
-              </label>
-              <Field name="groupname" type="text" />
-            </div>
+              <div className="meetingElementBlock">
+                <label htmlFor="email" className="label">
+                  Email:
+                </label>
+                <Field name="email" type="text" />
+              </div>
+              <div className="meetingElementBlock">
+                <label htmlFor="Mobile" className="label">
+                  Position:
+                </label>
+                <Field name="position" type="text" />
+              </div>
+              <div className="meetingElementBlock">
+                <label htmlFor="Mobile" className="label">
+                  Mobile:
+                </label>
+                <Field name="mobile" type="text" />
+              </div>
 
-            <div className="meetingElementBlock">
-              <label htmlFor="email" className="label">
-                Email:
-              </label>
-              <Field name="email" type="text" />
-            </div>
-
-            <div className="meetingElementBlock">
-              <label htmlFor="Mobile" className="label">
-                Position:
-              </label>
-              <Field name="position" type="text" />
-            </div>
-            <div className="meetingElementBlock">
-              <label htmlFor="Mobile" className="label">
-                Mobile:
-              </label>
-              <Field name="mobile" type="text" />
-            </div>
-            <div className="meetingElementBlock">
-              <label htmlFor="Mobile" className="label">
-                Qualification:
-              </label>
-              <Field name="qualification" type="text" />
-            </div>
-            <div className="meetingElementBlock">
-              <label htmlFor="Mobile" className="label">
-                Experience:
-              </label>
-              <Field name="experience" type="text" />
+              <div className="meetingElementBlock">
+                <label htmlFor="Mobile" className="label">
+                  Qualification:
+                </label>
+                <Field name="qualification" type="text" />
+              </div>
+              <div className="meetingElementBlock">
+                <label htmlFor="Mobile" className="label">
+                  Experience:
+                </label>
+                <Field name="experience" type="text" />
+              </div>
             </div>
             <div className="flex justify-center text-center">
               <button type="submit" className="">

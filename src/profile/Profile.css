@@ -16,7 +16,7 @@
 
 .meeting {
   position: absolute;
-  height: 80vh;
+  height: 85vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -79,4 +79,9 @@
   outline: none;
   border-radius: 2px;
   opacity: 0.9;
+}
+.profilebg {
+  background-image: url("./2.jpg");
+  background-size: cover;
+  /* opacity: 0.8; */
 }

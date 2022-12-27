@@ -7,7 +7,8 @@ function Decide() {
   const [initialValues, setInitialvalues] = useState({
     name: " Hrushikesh Ambike",
     position: "web developer",
-    organizationname: "Keystone",
+    organizationname:
+      "SHALAKA FOUNDATIONS KEYSTONE SCHOOL OF ENGINEERING, PUNE",
     qualification: "B.Tech",
     groupname: "Group Firve",
     email: "email@x.x",
